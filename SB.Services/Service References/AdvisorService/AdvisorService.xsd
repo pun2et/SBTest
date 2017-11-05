@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://edell.dell.com/solutions/contract/advisors/v1" elementFormDefault="qualified" targetNamespace="http://edell.dell.com/solutions/contract/advisors/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd4" namespace="http://edell.dell.com/solutions/schema/advisors/v1" />
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" />
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionTimeLeft">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extend" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionTimeLeftResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SessionTimeLeftResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAdvisor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q1:AdvisorRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadAdvisorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="AdvisorResponse" nillable="true" type="q2:AdvisorResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadSteps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="stepRequest" nillable="true" type="q3:AdvisorStepRequest" />
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="advisorRequestId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadStepsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="AdvisorStepResponse" nillable="true" type="q4:AdvisorStepResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q5:AdvisorStateRequest" />
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="AdvisorStateResponse" nillable="true" type="q6:AdvisorStateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecommendation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q7:AdvisorStateRequest" />
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecommendationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" minOccurs="0" name="GetRecommendationResponse" nillable="true" type="q8:RecommendationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userAdvisorRequestId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" minOccurs="0" name="GetRecommendationResponse" nillable="true" type="q9:RecommendationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPremierAdvisorList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q10:AdvisorLightweightRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPremierAdvisorListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AdvisorResponse" nillable="true" type="q11:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInputSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="requestState" nillable="true" type="q12:AdvisorStateRequest" />
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userAdvisorRequestId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInputSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="AdvisorStepResponse" nillable="true" type="q13:AdvisorStepResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SwitchConfigFailoverDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q14:FailoverDatabaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SwitchConfigFailoverDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="FailoverDatabaseResponse" nillable="true" type="q15:FailoverDatabaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogMappedAdvisors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="request" nillable="true" type="q16:CatalogMappedAdvisorsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogMappedAdvisorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://edell.dell.com/solutions/schema/advisors/v1" minOccurs="0" name="GetCatalogMappedAdvisors" nillable="true" type="q17:CatalogMappedAdvisorsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

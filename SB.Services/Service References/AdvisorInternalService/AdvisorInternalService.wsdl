@@ -1,0 +1,2229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://edell.dell.com/solutions/contract/advisors/v1" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdvisorInternalService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_IAdvisorInternalService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://edell.dell.com/solutions/contract/advisors/v1" location="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IAdvisorInternalService" type="i0:IAdvisorInternalService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorsByFriendlyName">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorsByFriendlyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueAdvisors">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetUniqueAdvisors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorsByType">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorsByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestionSteps">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestionSteps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestion">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionTemplate">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveProductSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneProductSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneProductSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestionRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestionRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationAttributes">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetLocalizationAttributes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetQuestionRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CopyAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneStep">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneSolution">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneSolution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SearchAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNews">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorIntroDetails">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorIntroDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdditionalInfo">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdditionalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PublishAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PublishAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSequence">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSolutionSequence">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateSolutionSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSetsByTemplateId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductSetsByTemplateId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorForCMS">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorForCMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorFromCMS">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorFromCMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateTree">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateTypes">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolution">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByRegion">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetCatalogsByRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductTreeByCatalogId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductTreeByCatalogId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogDetails">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetCatalogDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonTiedLineItemSkus">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetNonTiedLineItemSkus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulesByChassisId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetModulesByChassisId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttributesByChassisIdModuleId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAttributesByChassisIdModuleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetComponentProductDetails">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetComponentProductDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTiedSkus">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetTiedSkus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionSetsByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionSetComponent">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionSetComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadSpreadsheet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DownloadSpreadsheet" style="document" />
+      <wsdl:input name="SpreadsheetDownloadRequest">
+        <soap:header message="i0:SpreadsheetDownloadRequest_Headers" part="IsNewSpreadsheet" use="literal" />
+        <soap:header message="i0:SpreadsheetDownloadRequest_Headers" part="OverrideExistingSpreadsheet" use="literal" />
+        <soap:header message="i0:SpreadsheetDownloadRequest_Headers" part="SpreadsheetMetaData" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SpreadsheetReponse">
+        <soap:header message="i0:SpreadsheetReponse_Headers" part="Metadata" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSpreadSheet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UploadSpreadSheet" style="document" />
+      <wsdl:input name="SpreadsheetUploadRequest">
+        <soap:header message="i0:SpreadsheetUploadRequest_Headers" part="Metadata" use="literal" />
+        <soap:header message="i0:SpreadsheetUploadRequest_Headers" part="SaveAsNewVersion" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SpreadsheetMessage">
+        <soap:header message="i0:SpreadsheetMessage_Headers" part="SpreadsheetMessages" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpreadsheetsInfoByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSpreadsheetsInfoByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpreadsheetByIds">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSpreadsheetByIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSpreadsheetsByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAllSpreadsheetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSpreadSheetCustomFunction">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSpreadSheetCustomFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpreadSheetCustomFunctions">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSpreadSheetCustomFunctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpreadSheetCustomFunction">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSpreadSheetCustomFunction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStep">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuestion">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNews">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteProductSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolutionSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSolutionSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolutionSetComponent">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSolutionSetComponent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdditionalInfo">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdditionalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRuleSetsByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductRuleSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveProductRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteProductRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluationRuleSetsByAdvisorId">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetEvaluationRuleSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEvaluationRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveEvaluationRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvaluationRuleSet">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteEvaluationRuleSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateKey">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSolutionAdvisor">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorUser">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisorUser">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisorUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateAdvisorUserRole">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/AssociateAdvisorUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorUserConfiguration">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorUserConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorUserProfile">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorUsers">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateNTLogin">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateNTLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAdvisorAccess">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorAccess">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisorAccess">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorAccess">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegularExpressions">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetRegularExpressions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvisorMessages">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateAdvisorMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorMessages">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDynamicContents">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateDynamicContents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicContents">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetDynamicContents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyChange">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/NotifyChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateCountriesByRegion">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateCountriesByRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateLanguagesByCountry">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateLanguagesByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateCustomersetByCountry">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateCustomersetByCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCatalogMappedDetails">
+      <soap:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveCatalogMappedDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetNamedPipeBinding_IAdvisorInternalService" type="i0:IAdvisorInternalService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_IAdvisorInternalService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorsByFriendlyName">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorsByFriendlyName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueAdvisors">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetUniqueAdvisors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorsByType">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorsByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestionSteps">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestionSteps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestion">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionTemplate">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveProductSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneProductSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneProductSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQuestionRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveQuestionRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalizationAttributes">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetLocalizationAttributes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetQuestionRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CopyAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneStep">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneStep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneSolution">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/CloneSolution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SearchAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveNews">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorIntroDetails">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorIntroDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdditionalInfo">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdditionalInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PublishAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PublishAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSequence">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateSequence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSolutionSequence">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateSolutionSequence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSetsByTemplateId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductSetsByTemplateId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorForCMS">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorForCMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorFromCMS">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorFromCMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateTree">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionTemplateTypes">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionTemplateTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolution">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogsByRegion">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetCatalogsByRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductTreeByCatalogId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductTreeByCatalogId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogDetails">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetCatalogDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonTiedLineItemSkus">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetNonTiedLineItemSkus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetModulesByChassisId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetModulesByChassisId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttributesByChassisIdModuleId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAttributesByChassisIdModuleId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetComponentProductDetails">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetComponentProductDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTiedSkus">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetTiedSkus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutionSetsByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSolutionSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSolutionSetComponent">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSolutionSetComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadSpreadsheet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DownloadSpreadsheet" style="document" />
+      <wsdl:input name="SpreadsheetDownloadRequest">
+        <soap12:header message="i0:SpreadsheetDownloadRequest_Headers" part="IsNewSpreadsheet" use="literal" />
+        <soap12:header message="i0:SpreadsheetDownloadRequest_Headers" part="OverrideExistingSpreadsheet" use="literal" />
+        <soap12:header message="i0:SpreadsheetDownloadRequest_Headers" part="SpreadsheetMetaData" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SpreadsheetReponse">
+        <soap12:header message="i0:SpreadsheetReponse_Headers" part="Metadata" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSpreadSheet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UploadSpreadSheet" style="document" />
+      <wsdl:input name="SpreadsheetUploadRequest">
+        <soap12:header message="i0:SpreadsheetUploadRequest_Headers" part="Metadata" use="literal" />
+        <soap12:header message="i0:SpreadsheetUploadRequest_Headers" part="SaveAsNewVersion" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SpreadsheetMessage">
+        <soap12:header message="i0:SpreadsheetMessage_Headers" part="SpreadsheetMessages" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpreadsheetsInfoByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSpreadsheetsInfoByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpreadsheetByIds">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSpreadsheetByIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSpreadsheetsByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAllSpreadsheetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSpreadSheetCustomFunction">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveSpreadSheetCustomFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpreadSheetCustomFunctions">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetSpreadSheetCustomFunctions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpreadSheetCustomFunction">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSpreadSheetCustomFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStep">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteStep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQuestion">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteQuestion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNews">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteProductSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolutionSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSolutionSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSolutionSetComponent">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteSolutionSetComponent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdditionalInfo">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdditionalInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductRuleSetsByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProductRuleSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveProductRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveProductRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteProductRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluationRuleSetsByAdvisorId">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetEvaluationRuleSetsByAdvisorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEvaluationRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveEvaluationRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvaluationRuleSet">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteEvaluationRuleSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateKey">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSolutionAdvisor">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateSolutionAdvisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorUser">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisorUser">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisorUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateAdvisorUserRole">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/AssociateAdvisorUserRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorUserConfiguration">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorUserConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorUserProfile">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorUserProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorUsers">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateNTLogin">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateNTLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAdvisorAccess">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/ValidateAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAdvisorAccess">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAdvisorAccess">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/DeleteAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorAccess">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegularExpressions">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetRegularExpressions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvisorMessages">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateAdvisorMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvisorMessages">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetAdvisorMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDynamicContents">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/UpdateDynamicContents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicContents">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetDynamicContents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyChange">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/NotifyChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProcessStatus">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateCountriesByRegion">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateCountriesByRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateLanguagesByCountry">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateLanguagesByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PopulateCustomersetByCountry">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/PopulateCustomersetByCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCatalogMappedDetails">
+      <soap12:operation soapAction="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorInternalService/SaveCatalogMappedDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AdvisorServiceFaultFault">
+        <soap12:fault use="literal" name="AdvisorServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdvisorInternalService">
+    <wsdl:port name="BasicHttpBinding_IAdvisorInternalService" binding="tns:BasicHttpBinding_IAdvisorInternalService">
+      <soap:address location="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc" />
+    </wsdl:port>
+    <wsdl:port name="NetNamedPipeBinding_IAdvisorInternalService" binding="tns:NetNamedPipeBinding_IAdvisorInternalService">
+      <soap12:address location="net.pipe://g1vmadvsvc01.olqa.preol.dell.com/AdvisorsService/v1.0/AdvisorInternalService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://g1vmadvsvc01.olqa.preol.dell.com/AdvisorsService/v1.0/AdvisorInternalService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>Servicegbladvisors@amer.dell.com</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

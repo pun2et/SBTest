@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Test>
+<AdvisorBVTAmer>
+  <url>http://www-sit-g4.dell.com/solutions/SystemBuilder/us/en/g_5/SystemBuilderBVT/2?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>Mexico</Country>
+  <Checkbox1>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox1>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>RB Question Text,RB Ans Text,RB Short Desc,Short Ans</Radio>
+  <Radio2>Second radio button,SecondAnsComponent</Radio2>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans</TextBox>
+  <HiddenQuestionText>Second Question text</HiddenQuestionText>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Slider Short Ans</RangeSlider>
+  <Products>Alienware</Products>
+  <SolnName>BVT Long Name</SolnName>
+</AdvisorBVTAmer>
+  
+  <SBuilderBVTAmer>
+  <url>http://www-sit-g1.dell.com/solutions/SystemBuilder/us/en/g_5/SystemBuilderBVT/5?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>United States</Country>
+  <Checkbox1>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox1>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>RB Question Text,RB Ans Text,RB Short Desc,Short Ans 20</Radio>
+  <Radio2>Second radio button,SecondAnsComponent</Radio2>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans - Answer 20</TextBox>
+  <HiddenQuestionText>Second Question text</HiddenQuestionText>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans - 50 10</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short Ans 10</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans - 10 10</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Range Slider Short Ans - 10, 10 10</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+  
+</SBuilderBVTAmer>
+  
+<AdvisorBVTEMEA>
+  <url>http://www-sit-g1.dell.com/solutions/advisors/uk/en/g_20202/SystemBuilderBVT/5?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>United Kingdom</Country>
+  <Checkbox>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>Second radio button,Second radio button,RB Short Desc,Short Ans</Radio>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans</TextBox>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Slider Short Ans</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+</AdvisorBVTEMEA>
+  
+  <SBuilderBVTEMEA>
+  <url>http://www-sit-g1.dell.com/solutions/SystemBuilder/uk/en/g_20202/SystemBuilderBVT/5?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>United Kingdom</Country>
+ <Checkbox1>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox1>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>RB Question Text,RB Ans Text,RB Short Desc,Short Ans 20</Radio>
+  <Radio2>Second radio button,SecondAnsComponent</Radio2>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans - Answer 20</TextBox>
+  <HiddenQuestionText>Second Question text</HiddenQuestionText>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans - 50 10</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short Ans 10</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans - 10 10</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Range Slider Short Ans - 10, 10 10</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+</SBuilderBVTEMEA>
+  
+<AdvisorBVTAPJ>
+  <url>http://www-sit-g1.dell.com/solutions/advisors/au/en/g_39101/SystemBuilderBVT/5?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>Australia</Country>
+  <Checkbox>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>Second radio button,Second radio button,RB Short Desc,Short Ans</Radio>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans</TextBox>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Slider Short Ans</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+</AdvisorBVTAPJ>
+  
+<SBuilderBVTAPJ>
+  <url>http://www-sit-g1.dell.com/solutions/systembuilder/au/en/g_39101/SystemBuilderBVT/5?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>Australia</Country>
+  <Checkbox1>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox1>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>RB Question Text,RB Ans Text,RB Short Desc,Short Ans 20</Radio>
+  <Radio2>Second radio button,SecondAnsComponent</Radio2>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans - Answer 20</TextBox>
+  <HiddenQuestionText>Second Question text</HiddenQuestionText>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans - 50 10</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short Ans 10</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans - 10 10</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Range Slider Short Ans - 10, 10 10</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+</SBuilderBVTAPJ>
+  
+<ProTestAMER>
+  <url>http://www.dell.com/solutions/advisors/us/en/g_5/SystemBuilderBVT/2?nocache&amp;s=biz</url>
+  <AdvisorTitle>SB_BVT</AdvisorTitle>
+  <IntroBlurb>This is BVT scenario for System Builder</IntroBlurb>
+  <Country>Australia</Country>
+  <Checkbox1>CheckBoxText,CheckBox Ans Text,Short Desc,Short Ans 20</Checkbox1>
+  <Checkbox2>Second Check Box,second Check box,Short Desc,Short Ans 20</Checkbox2>
+  <Radio>RB Question Text,RB Ans Text,RB Short Desc,Short Ans 20</Radio>
+  <Radio2>Second radio button,SecondAnsComponent</Radio2>
+  <TextBox>Text Box Question Text,text Box Ans Text,Answer,Text Box Question Short Desc,Short Ans - Answer 20</TextBox>
+  <HiddenQuestionText>Second Question text</HiddenQuestionText>
+  <NumTextBox>NTBox Question Text,NTBox Ans text,50,NTBox Short Desc,NTBox Short Ans - 50 10</NumTextBox>
+  <Dropdown>Second Drop Down,Second DropDown,Drop Down Short Desc,Drop Down Short Ans 10</Dropdown>
+  <Slider>SliderAnsText,50,Slider Short desc,Slider Short Ans - 10 10</Slider>
+  <RangeSlider>Range Slider And TExt,10,50,Slider Short desc,Range Slider Short Ans - 10, 10 10</RangeSlider>
+  <Products>PowerEdge</Products>
+  <SolnName>BVT Long Name</SolnName>
+</ProTestAMER>
+</Test>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://edell.dell.com/solutions/contract/advisors/v1" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://edell.dell.com/solutions/contract/advisors/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://edell.dell.com/solutions/contract/advisors/v1/Imports">
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd0" namespace="http://edell.dell.com/solutions/contract/advisors/v1" />
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" />
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd4" namespace="http://edell.dell.com/solutions/schema/advisors/v1" />
+      <xsd:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdvisorService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_Ping_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q1:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SessionTimeLeft_InputMessage">
+    <wsdl:part name="parameters" element="tns:SessionTimeLeft" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SessionTimeLeft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SessionTimeLeftResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SessionTimeLeft_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q2:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadAdvisor_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAdvisor" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadAdvisor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadAdvisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadAdvisor_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q3:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadSteps_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadSteps" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadSteps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_LoadSteps_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q4:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_ProcessRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_ProcessRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_ProcessRequest_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q5:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetRecommendation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendation" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetRecommendation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecommendationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetRecommendation_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q6:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetSolutions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutions" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetSolutions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetSolutions_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q7:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetPremierAdvisorList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPremierAdvisorList" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetPremierAdvisorList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPremierAdvisorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetPremierAdvisorList_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q8:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetInputSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInputSummary" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetInputSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInputSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetInputSummary_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q9:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SwitchConfigFailoverDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SwitchConfigFailoverDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SwitchConfigFailoverDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SwitchConfigFailoverDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_SwitchConfigFailoverDatabase_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q10:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetCatalogMappedAdvisors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogMappedAdvisors" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetCatalogMappedAdvisors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogMappedAdvisorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdvisorService_GetCatalogMappedAdvisors_AdvisorServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Dell.Advisors.Common.Exceptions" name="detail" element="q11:AdvisorServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="IAdvisorService">
+    <wsdl:documentation>
+      <appFramework>
+        <AppContextBehaviorAttribute><![CDATA[<?xml version="1.0" encoding="utf-16"?><WsdlSerializedAttribute xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Dell.AppFramework.DataContracts.Wsdl"><Arguments /><AttributeType>Dell.AppFramework.Core.Messaging.Behaviors.AppContextBehaviorAttribute</AttributeType></WsdlSerializedAttribute>]]></AppContextBehaviorAttribute>
+        <codeComments>
+          <remarks>v1.0 - 1.0</remarks>
+        </codeComments>
+      </appFramework>
+    </wsdl:documentation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/Ping" message="tns:IAdvisorService_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/PingResponse" message="tns:IAdvisorService_Ping_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/PingAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_Ping_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SessionTimeLeft">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SessionTimeLeft" message="tns:IAdvisorService_SessionTimeLeft_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SessionTimeLeftResponse" message="tns:IAdvisorService_SessionTimeLeft_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SessionTimeLeftAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_SessionTimeLeft_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadAdvisor">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadAdvisor" message="tns:IAdvisorService_LoadAdvisor_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadAdvisorResponse" message="tns:IAdvisorService_LoadAdvisor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadAdvisorAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_LoadAdvisor_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSteps">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadSteps" message="tns:IAdvisorService_LoadSteps_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadStepsResponse" message="tns:IAdvisorService_LoadSteps_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/LoadStepsAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_LoadSteps_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRequest">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/ProcessRequest" message="tns:IAdvisorService_ProcessRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/ProcessRequestResponse" message="tns:IAdvisorService_ProcessRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/ProcessRequestAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_ProcessRequest_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecommendation">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetRecommendation" message="tns:IAdvisorService_GetRecommendation_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetRecommendationResponse" message="tns:IAdvisorService_GetRecommendation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetRecommendationAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_GetRecommendation_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutions">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetSolutions" message="tns:IAdvisorService_GetSolutions_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetSolutionsResponse" message="tns:IAdvisorService_GetSolutions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetSolutionsAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_GetSolutions_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPremierAdvisorList">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetPremierAdvisorList" message="tns:IAdvisorService_GetPremierAdvisorList_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetPremierAdvisorListResponse" message="tns:IAdvisorService_GetPremierAdvisorList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetPremierAdvisorListAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_GetPremierAdvisorList_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInputSummary">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetInputSummary" message="tns:IAdvisorService_GetInputSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetInputSummaryResponse" message="tns:IAdvisorService_GetInputSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetInputSummaryAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_GetInputSummary_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SwitchConfigFailoverDatabase">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SwitchConfigFailoverDatabase" message="tns:IAdvisorService_SwitchConfigFailoverDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SwitchConfigFailoverDatabaseResponse" message="tns:IAdvisorService_SwitchConfigFailoverDatabase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/SwitchConfigFailoverDatabaseAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_SwitchConfigFailoverDatabase_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogMappedAdvisors">
+      <wsdl:input wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetCatalogMappedAdvisors" message="tns:IAdvisorService_GetCatalogMappedAdvisors_InputMessage" />
+      <wsdl:output wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetCatalogMappedAdvisorsResponse" message="tns:IAdvisorService_GetCatalogMappedAdvisors_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://edell.dell.com/solutions/contract/advisors/v1/IAdvisorService/GetCatalogMappedAdvisorsAdvisorServiceFaultFault" name="AdvisorServiceFaultFault" message="tns:IAdvisorService_GetCatalogMappedAdvisors_AdvisorServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

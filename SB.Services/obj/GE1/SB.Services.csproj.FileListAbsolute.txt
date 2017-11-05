@@ -1,0 +1,8 @@
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\SB.Services.dll.config
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\SB.Services.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\SB.Services.pdb
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\Microsoft.CSharp.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\bin\GE1\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\obj\GE1\SB.Services.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Services\obj\GE1\SB.Services.pdb

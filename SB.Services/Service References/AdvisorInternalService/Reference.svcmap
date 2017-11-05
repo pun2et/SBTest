@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03f7a75e-25d6-4e49-b63d-285afdb03fec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://g1vmadvsvc01.olqa.preol.dell.com:1000/advisorsservice/v1.0/AdvisorInternalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdvisorInternalService.wsdl" MetadataType="Wsdl" ID="edcb430e-e4a5-4db0-b070-a24b068796aa" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?wsdl" />
+    <MetadataFile FileName="AdvisorInternalService.xsd" MetadataType="Schema" ID="acb067d3-0750-4fa7-ac72-181ba9ef23f3" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdvisorInternalService1.xsd" MetadataType="Schema" ID="78f7c011-02f2-4c14-9378-e4b8a5ba05ce" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdvisorInternalService2.xsd" MetadataType="Schema" ID="b6fed35d-0a8a-402e-8c0c-c7265ae13de9" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdvisorInternalService3.xsd" MetadataType="Schema" ID="b3b5e1ae-3b44-4007-8944-c5d17b471f82" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AdvisorInternalService4.xsd" MetadataType="Schema" ID="81a34c23-4543-48d7-b2a5-9ae2363aff57" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AdvisorInternalService.disco" MetadataType="Disco" ID="51886f1e-1df9-4ae6-972b-2f9714c7e9b9" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?disco" />
+    <MetadataFile FileName="AdvisorInternalService5.xsd" MetadataType="Schema" ID="e6848967-6f7e-47bd-baaa-64b1fdd9a081" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd6" />
+    <MetadataFile FileName="AdvisorInternalService6.xsd" MetadataType="Schema" ID="7c7c49de-be00-4368-90b0-5568758cca0f" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AdvisorInternalService1.wsdl" MetadataType="Wsdl" ID="bf99b185-4d16-4b1c-9d4c-baf349e6eb78" SourceId="1" SourceUrl="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorInternalService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

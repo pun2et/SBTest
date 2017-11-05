@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://edell.dell.com/solutions/schema/advisors/v1" elementFormDefault="qualified" targetNamespace="http://edell.dell.com/solutions/schema/advisors/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" />
+  <xs:import schemaLocation="http://g1vmadvsvc01.olqa.preol.dell.com:1000/AdvisorsService/v1.0/AdvisorService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="AdvisorRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoCache" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Segment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorRequest" nillable="true" type="tns:AdvisorRequest" />
+  <xs:complexType name="AdvisorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorCatalogs" nillable="true" type="tns:ArrayOfAdvisorCatalog" />
+      <xs:element minOccurs="0" name="AdvisorId" type="ser:guid" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" minOccurs="0" name="AdvisorType" type="q1:AdvisorType" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactMethod" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:IntroDetail" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalHelpURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDellStarEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLeadGenEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPdfEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPremierAdvisor" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Layout" type="tns:LayoutType" />
+      <xs:element minOccurs="0" name="LeadGenBannerInfo" nillable="true" type="tns:AdditionalInfo" />
+      <xs:element minOccurs="0" name="OmnitureCampaignID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherAdvisors" nillable="true" type="tns:ArrayOfAdvisorNameTag" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionTime" type="xs:int" />
+      <xs:element minOccurs="0" name="Steps" nillable="true" type="tns:ArrayOfStep" />
+      <xs:element minOccurs="0" name="TakeActionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TakeActionType" type="tns:TakeAction" />
+      <xs:element minOccurs="0" name="VersionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorResponse" nillable="true" type="tns:AdvisorResponse" />
+  <xs:complexType name="ArrayOfAdvisorCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdvisorCatalog" nillable="true" type="tns:AdvisorCatalog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdvisorCatalog" nillable="true" type="tns:ArrayOfAdvisorCatalog" />
+  <xs:complexType name="AdvisorCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultCustomerSet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorCatalog" nillable="true" type="tns:AdvisorCatalog" />
+  <xs:complexType name="ArrayOfAdditionalInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalInfo" nillable="true" type="tns:AdditionalInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdditionalInfo" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+  <xs:complexType name="AdditionalInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallToAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallToActionKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescriptionKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstanceId" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TitleKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:AdditionalInfoType" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdditionalInfo" nillable="true" type="tns:AdditionalInfo" />
+  <xs:simpleType name="AdditionalInfoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="Phone" />
+      <xs:enumeration value="LeadGen" />
+      <xs:enumeration value="Faq" />
+      <xs:enumeration value="Video" />
+      <xs:enumeration value="Pdf" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdditionalInfoType" nillable="true" type="tns:AdditionalInfoType" />
+  <xs:complexType name="IntroDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AdvisorInfo" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Disclaimer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisclaimerKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HelpText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HelpTextKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ImageAlternateText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IntroBlurb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IntroBlurbKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SampleResultImageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleResultTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleResultTitleKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartUpFlashKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartUpFlashTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartUpFlashUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseStandardDisclaimer" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IntroDetail" nillable="true" type="tns:IntroDetail" />
+  <xs:simpleType name="LayoutType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LayoutType" nillable="true" type="tns:LayoutType" />
+  <xs:complexType name="ArrayOfAdvisorNameTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdvisorNameTag" nillable="true" type="tns:AdvisorNameTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdvisorNameTag" nillable="true" type="tns:ArrayOfAdvisorNameTag" />
+  <xs:complexType name="AdvisorNameTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VersionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorNameTag" nillable="true" type="tns:AdvisorNameTag" />
+  <xs:complexType name="ArrayOfStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Step" nillable="true" type="tns:Step" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStep" nillable="true" type="tns:ArrayOfStep" />
+  <xs:complexType name="Step">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescriptionKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDecisionStep" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfQuestion" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="StepAdditionalInfo" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+      <xs:element minOccurs="0" name="StepKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StepName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Step" nillable="true" type="tns:Step" />
+  <xs:complexType name="ArrayOfQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Question" nillable="true" type="tns:Question" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestion" nillable="true" type="tns:ArrayOfQuestion" />
+  <xs:complexType name="Question">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorMessageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AnswerType" type="tns:AnswerType" />
+      <xs:element minOccurs="0" name="Answers" nillable="true" type="tns:ArrayOfAnswer" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescriptionKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsCurrentQuestion" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLastQuestion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NextQuestionId" type="ser:guid">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuestionCustomMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="QuestionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionType" type="tns:QuestionType" />
+      <xs:element minOccurs="0" name="RuleSet" nillable="true" type="tns:RuleSet">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortDescriptionKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StepId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Question" nillable="true" type="tns:Question" />
+  <xs:simpleType name="AnswerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CheckBox" />
+      <xs:enumeration value="RadioButton" />
+      <xs:enumeration value="NumericTextBox" />
+      <xs:enumeration value="FreeTextBox" />
+      <xs:enumeration value="DropDownList" />
+      <xs:enumeration value="List" />
+      <xs:enumeration value="AndCheckBox" />
+      <xs:enumeration value="Slider" />
+      <xs:enumeration value="RangeSlider" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnswerType" nillable="true" type="tns:AnswerType" />
+  <xs:complexType name="ArrayOfAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Answer" nillable="true" type="tns:Answer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnswer" nillable="true" type="tns:ArrayOfAnswer" />
+  <xs:complexType name="Answer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalInfoKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AdditionalInfoTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdvisorMessageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="AnswerCustomMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnswerKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AnswerText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescriptionKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IncludeAdditionalInfo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Length" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxValue" type="xs:double" />
+      <xs:element minOccurs="0" name="MinValue" type="xs:double" />
+      <xs:element minOccurs="0" name="NumericPrecision" type="xs:double" />
+      <xs:element minOccurs="0" name="QuestionId" type="ser:guid" />
+      <xs:element minOccurs="0" name="RangeInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="RegExpression" nillable="true" type="tns:RegExpression">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SelectedMaxValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SelectedMinValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ShortAnswer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortAnswerKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UnitOfMeasurement" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Answer" nillable="true" type="tns:Answer" />
+  <xs:complexType name="RegExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegEx" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegExpression" nillable="true" type="tns:RegExpression" />
+  <xs:simpleType name="QuestionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Filter" />
+      <xs:enumeration value="HardFilter" />
+      <xs:enumeration value="Score" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QuestionType" nillable="true" type="tns:QuestionType" />
+  <xs:complexType name="RuleSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Rules" nillable="true" type="tns:ArrayOfQNARule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleSet" nillable="true" type="tns:RuleSet" />
+  <xs:complexType name="ArrayOfQNARule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QNARule" nillable="true" type="tns:QNARule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQNARule" nillable="true" type="tns:ArrayOfQNARule" />
+  <xs:complexType name="QNARule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Else" nillable="true" type="tns:QNARuleBlock" />
+      <xs:element minOccurs="0" name="ElseIf" nillable="true" type="tns:ArrayOfQNARuleBlock" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="If" nillable="true" type="tns:QNARuleBlock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QNARule" nillable="true" type="tns:QNARule" />
+  <xs:complexType name="QNARuleBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Actions" nillable="true" type="tns:ArrayOfAction" />
+      <xs:element minOccurs="0" name="Logic" nillable="true" type="tns:ArrayOfExpressionGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QNARuleBlock" nillable="true" type="tns:QNARuleBlock" />
+  <xs:complexType name="ArrayOfAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Action" nillable="true" type="tns:Action" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAction" nillable="true" type="tns:ArrayOfAction" />
+  <xs:complexType name="Action">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComparisonType" type="tns:ComparisonType" />
+      <xs:element minOccurs="0" name="Parameter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Step" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:ActionType" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Action" nillable="true" type="tns:Action" />
+  <xs:simpleType name="ComparisonType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Float" />
+      <xs:enumeration value="Bool" />
+      <xs:enumeration value="Formula" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ComparisonType" nillable="true" type="tns:ComparisonType" />
+  <xs:simpleType name="ActionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SetValue" />
+      <xs:enumeration value="SetMinValue" />
+      <xs:enumeration value="SetMaxValue" />
+      <xs:enumeration value="SetVisibility" />
+      <xs:enumeration value="SetEnabled" />
+      <xs:enumeration value="SetNextQuestion" />
+      <xs:enumeration value="SelectOption" />
+      <xs:enumeration value="SelectOptionByConstraint" />
+      <xs:enumeration value="SetLastStep" />
+      <xs:enumeration value="SetSkuQuantity" />
+      <xs:enumeration value="ShowMessage" />
+      <xs:enumeration value="ShowError" />
+      <xs:enumeration value="ShowWarning" />
+      <xs:enumeration value="SetTopology" />
+      <xs:enumeration value="SetFabricType" />
+      <xs:enumeration value="SetDisplay" />
+      <xs:enumeration value="SetSolutionMessage" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActionType" nillable="true" type="tns:ActionType" />
+  <xs:complexType name="ArrayOfExpressionGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpressionGroup" nillable="true" type="tns:ExpressionGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpressionGroup" nillable="true" type="tns:ArrayOfExpressionGroup" />
+  <xs:complexType name="ExpressionGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Condition" nillable="true" type="tns:ArrayOfExpression" />
+      <xs:element minOccurs="0" name="LogicalOperator" type="tns:LogicalOperator" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpressionGroup" nillable="true" type="tns:ExpressionGroup" />
+  <xs:complexType name="ArrayOfExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Expression" nillable="true" type="tns:Expression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpression" nillable="true" type="tns:ArrayOfExpression" />
+  <xs:complexType name="Expression">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnswerOrComponentElement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConditionalConstruct" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndRange" type="xs:float" />
+      <xs:element minOccurs="0" name="ExpressionCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Left" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionOrComponent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationalOperator" type="tns:RelationalOperator" />
+      <xs:element minOccurs="0" name="Right" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartRange" type="xs:float" />
+      <xs:element minOccurs="0" name="StepOrSolutionSet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:ComparisonType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Expression" nillable="true" type="tns:Expression" />
+  <xs:simpleType name="RelationalOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equals" />
+      <xs:enumeration value="NotEquals" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="LesserThan" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="LesserThanOrEqual" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="Between" />
+      <xs:enumeration value="Undefined" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RelationalOperator" nillable="true" type="tns:RelationalOperator" />
+  <xs:simpleType name="LogicalOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="OR" />
+      <xs:enumeration value="NOT_OR" />
+      <xs:enumeration value="NOT_AND" />
+      <xs:enumeration value="XOR" />
+      <xs:enumeration value="XNOR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LogicalOperator" nillable="true" type="tns:LogicalOperator" />
+  <xs:complexType name="ArrayOfQNARuleBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QNARuleBlock" nillable="true" type="tns:QNARuleBlock" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQNARuleBlock" nillable="true" type="tns:ArrayOfQNARuleBlock" />
+  <xs:simpleType name="TakeAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ContactSales" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TakeAction" nillable="true" type="tns:TakeAction" />
+  <xs:complexType name="AdvisorStepRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="DPACKJobId" type="xs:int" />
+      <xs:element minOccurs="0" name="EndingStepNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GetActiveItemsOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoCache" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StartingStepNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorStepRequest" nillable="true" type="tns:AdvisorStepRequest" />
+  <xs:complexType name="AdvisorStepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfAdvisorMessage" />
+      <xs:element minOccurs="0" name="Steps" nillable="true" type="tns:ArrayOfStep" />
+      <xs:element minOccurs="0" name="TotalStepsAvailable" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorStepResponse" nillable="true" type="tns:AdvisorStepResponse" />
+  <xs:complexType name="ArrayOfAdvisorMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdvisorMessage" nillable="true" type="tns:AdvisorMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdvisorMessage" nillable="true" type="tns:ArrayOfAdvisorMessage" />
+  <xs:complexType name="AdvisorMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUpdated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorMessage" nillable="true" type="tns:AdvisorMessage" />
+  <xs:complexType name="AdvisorStateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromStepid" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LocalizationVariables" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="MoveToNextStep" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoCache" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OriginatingSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShowTrace" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SolutionOwnerEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToStepid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserResponses" nillable="true" type="tns:ArrayOfUserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorStateRequest" nillable="true" type="tns:AdvisorStateRequest" />
+  <xs:complexType name="ArrayOfUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserResponse" nillable="true" type="tns:UserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserResponse" nillable="true" type="tns:ArrayOfUserResponse" />
+  <xs:complexType name="UserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnswerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelectedMaxValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SelectedMinValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SelectedValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserResponse" nillable="true" type="tns:UserResponse" />
+  <xs:complexType name="AdvisorStateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Messages" nillable="true" type="tns:ArrayOfMessageAction" />
+          <xs:element minOccurs="0" name="MoveToStep" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Steps" nillable="true" type="tns:ArrayOfStepAction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AdvisorStateResponse" nillable="true" type="tns:AdvisorStateResponse" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DebugInfos" nillable="true" type="tns:ArrayOfDebugInfo" />
+      <xs:element minOccurs="0" name="ResponseMessages" nillable="true" type="tns:ArrayOfResponseMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:complexType name="ArrayOfDebugInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DebugInfo" nillable="true" type="tns:DebugInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDebugInfo" nillable="true" type="tns:ArrayOfDebugInfo" />
+  <xs:complexType name="DebugInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DebugMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DebugSourceType" type="tns:DebugSourceType" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElapsedTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="ExitMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="StateValues" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DebugInfo" nillable="true" type="tns:DebugInfo" />
+  <xs:simpleType name="DebugSourceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="QnARule" />
+      <xs:enumeration value="QnARuleIF" />
+      <xs:enumeration value="QnARuleELSEIF" />
+      <xs:enumeration value="QnARuleELSE" />
+      <xs:enumeration value="QnARuleExpression" />
+      <xs:enumeration value="QnARuleAction" />
+      <xs:enumeration value="ProductRule" />
+      <xs:enumeration value="ProductRuleIF" />
+      <xs:enumeration value="ProductRuleELSEIF" />
+      <xs:enumeration value="ProductRuleELSE" />
+      <xs:enumeration value="ProductRuleExpression" />
+      <xs:enumeration value="ProductRuleAction" />
+      <xs:enumeration value="EvaluationRule" />
+      <xs:enumeration value="EvaluationRuleIF" />
+      <xs:enumeration value="EvaluationRuleELSEIF" />
+      <xs:enumeration value="EvaluationRuleELSE" />
+      <xs:enumeration value="EvaluationRuleExpression" />
+      <xs:enumeration value="EvaluationRuleAction" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DebugSourceType" nillable="true" type="tns:DebugSourceType" />
+  <xs:complexType name="ActionDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AnswerKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuestionKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RightText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StepKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActionDebugInfo" nillable="true" type="tns:ActionDebugInfo" />
+  <xs:complexType name="ErrorDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ErrorDebugInfo" nillable="true" type="tns:ErrorDebugInfo" />
+  <xs:complexType name="EvaluationRuleActionDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComponentElementKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComponentKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="RightText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EvaluationRuleActionDebugInfo" nillable="true" type="tns:EvaluationRuleActionDebugInfo" />
+  <xs:complexType name="EvaluationRuleSetDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SolutionSet" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EvaluationRuleSetDebugInfo" nillable="true" type="tns:EvaluationRuleSetDebugInfo" />
+  <xs:complexType name="ExpressionDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnswerKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComparisonOperator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EvaluationStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="QuestionKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RightText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StepKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpressionDebugInfo" nillable="true" type="tns:ExpressionDebugInfo" />
+  <xs:complexType name="ProductRuleActionDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Attribute" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptionId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductRuleActionDebugInfo" nillable="true" type="tns:ProductRuleActionDebugInfo" />
+  <xs:complexType name="ProductRuleSetDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductKey" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Products" nillable="true" type="q4:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductRuleSetDebugInfo" nillable="true" type="tns:ProductRuleSetDebugInfo" />
+  <xs:complexType name="RuleBlockDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActionCount" type="xs:int" />
+          <xs:element minOccurs="0" name="BlockType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpressionCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RuleBlockDebugInfo" nillable="true" type="tns:RuleBlockDebugInfo" />
+  <xs:complexType name="RuleDebugInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DebugInfo">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RuleDebugInfo" nillable="true" type="tns:RuleDebugInfo" />
+  <xs:complexType name="ArrayOfResponseMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseMessage" nillable="true" type="tns:ResponseMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseMessage" nillable="true" type="tns:ArrayOfResponseMessage" />
+  <xs:complexType name="ResponseMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageSource" type="tns:MessageSource" />
+      <xs:element minOccurs="0" name="MessageType" type="tns:MessageType" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseMessage" nillable="true" type="tns:ResponseMessage" />
+  <xs:simpleType name="MessageSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Advisor" />
+      <xs:enumeration value="Config" />
+      <xs:enumeration value="SCSConnector" />
+      <xs:enumeration value="SCSCore" />
+      <xs:enumeration value="CMS" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageSource" nillable="true" type="tns:MessageSource" />
+  <xs:simpleType name="MessageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Info" />
+      <xs:enumeration value="Exception" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageType" nillable="true" type="tns:MessageType" />
+  <xs:complexType name="ArrayOfMessageAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageAction" nillable="true" type="tns:MessageAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageAction" nillable="true" type="tns:ArrayOfMessageAction" />
+  <xs:complexType name="MessageAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="State" type="tns:ActionState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageAction" nillable="true" type="tns:MessageAction" />
+  <xs:simpleType name="ActionState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Select" />
+      <xs:enumeration value="UnSelect" />
+      <xs:enumeration value="Hide" />
+      <xs:enumeration value="Show" />
+      <xs:enumeration value="Enable" />
+      <xs:enumeration value="Disable" />
+      <xs:enumeration value="Position" />
+      <xs:enumeration value="Value" />
+      <xs:enumeration value="SelectDisable" />
+      <xs:enumeration value="ShowMessage" />
+      <xs:enumeration value="ShowWarning" />
+      <xs:enumeration value="ShowError" />
+      <xs:enumeration value="SetMinValue" />
+      <xs:enumeration value="SetMaxValue" />
+      <xs:enumeration value="LastStep" />
+      <xs:enumeration value="NoActionRequired" />
+      <xs:enumeration value="SetNextStep" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActionState" nillable="true" type="tns:ActionState" />
+  <xs:complexType name="ArrayOfStepAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StepAction" nillable="true" type="tns:StepAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStepAction" nillable="true" type="tns:ArrayOfStepAction" />
+  <xs:complexType name="StepAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QuestionActions" nillable="true" type="tns:ArrayOfQuestionAction" />
+      <xs:element minOccurs="0" name="States" nillable="true" type="tns:ArrayOfActionState" />
+      <xs:element minOccurs="0" name="StepId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StepAction" nillable="true" type="tns:StepAction" />
+  <xs:complexType name="ArrayOfQuestionAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuestionAction" nillable="true" type="tns:QuestionAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestionAction" nillable="true" type="tns:ArrayOfQuestionAction" />
+  <xs:complexType name="QuestionAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnswerActions" nillable="true" type="tns:ArrayOfAnswerAction" />
+      <xs:element minOccurs="0" name="QuestionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="States" nillable="true" type="tns:ArrayOfActionState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestionAction" nillable="true" type="tns:QuestionAction" />
+  <xs:complexType name="ArrayOfAnswerAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnswerAction" nillable="true" type="tns:AnswerAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAnswerAction" nillable="true" type="tns:ArrayOfAnswerAction" />
+  <xs:complexType name="AnswerAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnswerId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDefaultEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaximumValue" type="xs:double" />
+      <xs:element minOccurs="0" name="MinimumValue" type="xs:double" />
+      <xs:element minOccurs="0" name="States" nillable="true" type="tns:ArrayOfActionState" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnswerAction" nillable="true" type="tns:AnswerAction" />
+  <xs:complexType name="ArrayOfActionState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActionState" type="tns:ActionState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActionState" nillable="true" type="tns:ArrayOfActionState" />
+  <xs:complexType name="ArrayOfSolutionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolutionResult" nillable="true" type="tns:SolutionResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolutionResult" nillable="true" type="tns:ArrayOfSolutionResult" />
+  <xs:complexType name="SolutionResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ComponentDetails" nillable="true" type="tns:ArrayOfConfigProduct" />
+          <xs:element minOccurs="0" name="Components" nillable="true" type="tns:ArrayOfSolutionSetComponent" />
+          <xs:element minOccurs="0" name="Connections" nillable="true" type="tns:ArrayOfConnection" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DPACKOverlaidChartData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NonTiedLineItems" nillable="true" type="tns:ArrayOfComponentLineItem" />
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SolutionDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SolutionId" type="xs:int" />
+          <xs:element minOccurs="0" name="SolutionMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SolutionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SolutionPrice" type="xs:double" />
+          <xs:element minOccurs="0" name="SolutionSetId" type="ser:guid" />
+          <xs:element minOccurs="0" name="SolutionTemplateId" type="ser:guid" />
+          <xs:element minOccurs="0" name="VersionNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SolutionResult" nillable="true" type="tns:SolutionResult" />
+  <xs:complexType name="ArrayOfConfigProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigProduct" nillable="true" type="tns:ConfigProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigProduct" nillable="true" type="tns:ArrayOfConfigProduct" />
+  <xs:complexType name="ConfigProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CatalogId" type="xs:int" />
+      <xs:element minOccurs="0" name="ChassisId" type="xs:int" />
+      <xs:element minOccurs="0" name="ComponentMessages" nillable="true" type="tns:ArrayOfResponseMessage" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FamilyId" type="xs:int" />
+      <xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modules" nillable="true" type="tns:ArrayOfConfigModule" />
+      <xs:element minOccurs="0" name="OfferPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="OrderCodeExternalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCodeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductType" type="tns:ProductSetProductType" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SegmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TiedLineItems" nillable="true" type="tns:ArrayOfComponentLineItem" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Units" nillable="true" type="q5:ArrayOfguid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigProduct" nillable="true" type="tns:ConfigProduct" />
+  <xs:complexType name="ArrayOfConfigModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigModule" nillable="true" type="tns:ConfigModule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigModule" nillable="true" type="tns:ArrayOfConfigModule" />
+  <xs:complexType name="ConfigModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMultiSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="Options" nillable="true" type="tns:ArrayOfConfigOption" />
+      <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigModule" nillable="true" type="tns:ConfigModule" />
+  <xs:complexType name="ArrayOfConfigOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConfigOption" nillable="true" type="tns:ConfigOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConfigOption" nillable="true" type="tns:ArrayOfConfigOption" />
+  <xs:complexType name="ConfigOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowMultiQuantity" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DefaultQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDefaultSelection" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OptionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidationAttributes" nillable="true" type="tns:ArrayOfInciteAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigOption" nillable="true" type="tns:ConfigOption" />
+  <xs:complexType name="ArrayOfInciteAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InciteAttribute" nillable="true" type="tns:InciteAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInciteAttribute" nillable="true" type="tns:ArrayOfInciteAttribute" />
+  <xs:complexType name="InciteAttribute">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AllowedValues" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="BooleanValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FloatValue" type="xs:float" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMultiValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStringAttribute" type="xs:boolean" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MultiValues" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InciteAttribute" nillable="true" type="tns:InciteAttribute" />
+  <xs:simpleType name="ProductSetProductType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Server" />
+      <xs:enumeration value="HBA" />
+      <xs:enumeration value="FiberChannelSwitch" />
+      <xs:enumeration value="DPE" />
+      <xs:enumeration value="DAE" />
+      <xs:enumeration value="Rack" />
+      <xs:enumeration value="Group" />
+      <xs:enumeration value="EthernetRackSwitch" />
+      <xs:enumeration value="TapeBackup" />
+      <xs:enumeration value="KVM" />
+      <xs:enumeration value="Blade" />
+      <xs:enumeration value="BladeServerEnclosure" />
+      <xs:enumeration value="Cluster" />
+      <xs:enumeration value="ValidationGroup" />
+      <xs:enumeration value="NAS" />
+      <xs:enumeration value="Upgrades" />
+      <xs:enumeration value="BladeSwitch" />
+      <xs:enumeration value="None" />
+      <xs:enumeration value="DiskArray" />
+      <xs:enumeration value="All" />
+      <xs:enumeration value="NIC" />
+      <xs:enumeration value="MultiPackShippingContainer" />
+      <xs:enumeration value="Desktop" />
+      <xs:enumeration value="Notebook" />
+      <xs:enumeration value="Software" />
+      <xs:enumeration value="InfiniBandSwitch" />
+      <xs:enumeration value="InfinibandHCA" />
+      <xs:enumeration value="Services" />
+      <xs:enumeration value="DiskBackup" />
+      <xs:enumeration value="EqualLogic" />
+      <xs:enumeration value="DataCenterSolutions" />
+      <xs:enumeration value="APOS" />
+      <xs:enumeration value="FlexComputing" />
+      <xs:enumeration value="Workstation" />
+      <xs:enumeration value="EthernetChassisSwitch" />
+      <xs:enumeration value="StandardConfigProduct">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1000</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FullCatalogProduct">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1001</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VelocityService">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1002</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProductSetProductType" nillable="true" type="tns:ProductSetProductType" />
+  <xs:complexType name="ArrayOfComponentLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComponentLineItem" nillable="true" type="tns:ComponentLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComponentLineItem" nillable="true" type="tns:ArrayOfComponentLineItem" />
+  <xs:complexType name="ComponentLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSystemTied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentItemId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SkuDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SkuNum" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComponentLineItem" nillable="true" type="tns:ComponentLineItem" />
+  <xs:complexType name="ArrayOfSolutionSetComponent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolutionSetComponent" nillable="true" type="tns:SolutionSetComponent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolutionSetComponent" nillable="true" type="tns:ArrayOfSolutionSetComponent" />
+  <xs:complexType name="SolutionSetComponent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentAdditionalInfo" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Elements" nillable="true" type="tns:ArrayOfSolutionSetComponentElement" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductSetComponentId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ProductSetComponentKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="SolutionSetComponentType" type="tns:SolutionSetComponentType" />
+      <xs:element minOccurs="0" name="Visibility" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolutionSetComponent" nillable="true" type="tns:SolutionSetComponent" />
+  <xs:complexType name="ArrayOfSolutionSetComponentElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolutionSetComponentElement" nillable="true" type="tns:SolutionSetComponentElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolutionSetComponentElement" nillable="true" type="tns:ArrayOfSolutionSetComponentElement" />
+  <xs:complexType name="SolutionSetComponentElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ComponentElementAdditionalInfo" nillable="true" type="tns:ArrayOfAdditionalInfo" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElementKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElementType" type="tns:SolutionSetComponentElementType" />
+      <xs:element minOccurs="0" name="ElementValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDisplayElement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNumeric" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitOfMeasurement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Visibility" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolutionSetComponentElement" nillable="true" type="tns:SolutionSetComponentElement" />
+  <xs:simpleType name="SolutionSetComponentElementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Display" />
+      <xs:enumeration value="Excel" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SolutionSetComponentElementType" nillable="true" type="tns:SolutionSetComponentElementType" />
+  <xs:simpleType name="SolutionSetComponentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hardware" />
+      <xs:enumeration value="Software" />
+      <xs:enumeration value="Services" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SolutionSetComponentType" nillable="true" type="tns:SolutionSetComponentType" />
+  <xs:complexType name="ArrayOfConnection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Connection" nillable="true" type="tns:Connection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConnection" nillable="true" type="tns:ArrayOfConnection" />
+  <xs:complexType name="Connection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnectionType" type="tns:ConnectionType" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End1GenderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End1ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End1UnitId" type="ser:guid" />
+      <xs:element minOccurs="0" name="End2GenderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End2ProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="End2UnitId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Connection" nillable="true" type="tns:Connection" />
+  <xs:simpleType name="ConnectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CableConnection" />
+      <xs:enumeration value="OnBoardConnection" />
+      <xs:enumeration value="Undefined" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ConnectionType" nillable="true" type="tns:ConnectionType" />
+  <xs:complexType name="AdvisorLightweightRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetrieveFlags" type="tns:AdvisorRetrieveFlags" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorLightweightRequest" nillable="true" type="tns:AdvisorLightweightRequest" />
+  <xs:simpleType name="AdvisorRetrieveFlags">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="HeaderOnly" />
+      <xs:enumeration value="HeaderStepsOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdvisorRetrieveFlags" nillable="true" type="tns:AdvisorRetrieveFlags" />
+  <xs:complexType name="FailoverDatabaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Database" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DbType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Server" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FailoverDatabaseRequest" nillable="true" type="tns:FailoverDatabaseRequest" />
+  <xs:complexType name="FailoverDatabaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfigServiceResponse" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsUpdated" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FailoverDatabaseResponse" nillable="true" type="tns:FailoverDatabaseResponse" />
+  <xs:complexType name="CatalogMappedAdvisorsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSetId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CatalogMappedAdvisorsRequest" nillable="true" type="tns:CatalogMappedAdvisorsRequest" />
+  <xs:complexType name="CatalogMappedAdvisorsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvisorBaseDetails" nillable="true" type="tns:ArrayOfAdvisorBaseDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CatalogMappedAdvisorsResponse" nillable="true" type="tns:CatalogMappedAdvisorsResponse" />
+  <xs:complexType name="ArrayOfAdvisorBaseDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdvisorBaseDetails" nillable="true" type="tns:AdvisorBaseDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdvisorBaseDetails" nillable="true" type="tns:ArrayOfAdvisorBaseDetails" />
+  <xs:complexType name="AdvisorBaseDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerSetId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FriendlyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="VersionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvisorBaseDetails" nillable="true" type="tns:AdvisorBaseDetails" />
+</xs:schema>

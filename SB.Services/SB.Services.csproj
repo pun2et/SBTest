@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D78F292-8FEE-465F-9454-A0FE4859323F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SB.Services</RootNamespace>
+    <AssemblyName>SB.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GE1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GE1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GE2|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GE2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GE3|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GE3\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GE4|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GE4\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvisorService\Components\AdvChannelFactory.cs" />
+    <Compile Include="AdvisorService\Components\AdvStdChannelFactory.cs" />
+    <Compile Include="AdvisorService\ServiceActions\ExternalSrvActions.cs" />
+    <Compile Include="AdvisorService\ServiceActions\InternalSrvActions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AdvisorInternalService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdvisorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService.wsdl" />
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService1.wsdl" />
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Advisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.AdvisorAccess.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.AdvisorHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.AdvisorMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.AdvisorUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.AdvisorUserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Catalog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.CMSAdvisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.CMSNotifyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.CMSProcessStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.CompileError.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ComponentLineItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ConfigModule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ConfigProduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.CustomerSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.DynamicContent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.EvaluationRuleSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.InciteAttribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Language.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.LocalizationAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.News.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ProductRuleSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ProductSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ProductTree.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.RegExpression.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.ResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.RuleSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionAdvisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionAdvisorValidationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionTemplate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionTemplateType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SolutionTreeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Spreadsheet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SpreadsheetCustomFunction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SpreadsheetMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.SpreadsheetReponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorInternalService\SB.Services.AdvisorInternalService.Step.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService.wsdl" />
+    <None Include="Service References\AdvisorService\AdvisorService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService1.wsdl" />
+    <None Include="Service References\AdvisorService\AdvisorService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\AdvisorService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.AdvisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.AdvisorStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.AdvisorStepResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.CatalogMappedAdvisorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.FailoverDatabaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdvisorService\SB.Services.AdvisorService.RecommendationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AdvisorInternalService\" />
+    <WCFMetadataStorage Include="Service References\AdvisorService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorService\AdvisorService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorInternalService\AdvisorInternalService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorInternalService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorInternalService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AdvisorInternalService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

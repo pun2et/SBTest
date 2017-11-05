@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dell.Advisors.Contracts.V1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AdvisorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SolutionAdvisor" />
+      <xs:enumeration value="ProductAdvisor" />
+      <xs:enumeration value="SelectorAdvisor" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdvisorType" nillable="true" type="tns:AdvisorType" />
+  <xs:simpleType name="OrderCodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Dellstar" />
+      <xs:enumeration value="Online" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderCodeType" nillable="true" type="tns:OrderCodeType" />
+  <xs:simpleType name="SalesChannel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotDefined" />
+      <xs:enumeration value="Offline" />
+      <xs:enumeration value="Online" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SalesChannel" nillable="true" type="tns:SalesChannel" />
+</xs:schema>

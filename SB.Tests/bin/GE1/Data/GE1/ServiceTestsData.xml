@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+  <FirstAdvisor>
+    <AdvFriendlyName>ServiceTestingAdv001</AdvFriendlyName>
+  </FirstAdvisor>
+  <AdvisorBVT>
+    <AdvisorFriendlyName>DASConnectivity</AdvisorFriendlyName>
+    <AdvisorFriendlyName2>TestingBuggati</AdvisorFriendlyName2>
+    <AdvisorDisplayName>ServiceTestingDisplayName</AdvisorDisplayName>
+    <AdvServiceUrl>http://g4vmadvsvc01.olqa.preol.dell.com:1000/advisorsservice/v1.0/AdvisorService.svc</AdvServiceUrl>
+    <AdvInternalService>http://g1vmadvsvc02.olqa.preol.dell.com:1000/advisorsservice/v1.0/AdvisorInternalService.svc</AdvInternalService>
+
+    <AdvisorStatusStaging>Staging</AdvisorStatusStaging>
+    <AdvisorStatusLive>Production</AdvisorStatusLive>
+    <TotalSolutionSets>1</TotalSolutionSets>
+    <TotalRegionalCompatibilitySets>3</TotalRegionalCompatibilitySets>
+    
+    <IntroBlurbKey>ServiceTestingAdv001_1_blurb</IntroBlurbKey>
+    <IntroBlurbText>This Blurb message is available</IntroBlurbText>
+    <TotalStepsAvailable>1</TotalStepsAvailable>
+    <QuestionText>What kind of system you want?</QuestionText>
+    <StepName>StepKeyOne</StepName>
+    <AnswerType>RadioButton</AnswerType>
+    <AnswerCount>2</AnswerCount>
+    <AnswerTextOne>Laptop</AnswerTextOne>
+    <AnswerTextTwo>Desktop</AnswerTextTwo>
+    
+    <TotalProductSetsCount>3</TotalProductSetsCount>
+    <AmerProductSetCatalogID>8</AmerProductSetCatalogID>
+    <AmerComponentOne>PowerEdgeT130</AmerComponentOne>
+    <AmerComponentTwo>PowerEdgeVRTX</AmerComponentTwo>
+    <AmerRegion>AMER</AmerRegion>
+    <AmerCountryCode>US</AmerCountryCode>
+    <AmerCustomerSet>g_8</AmerCustomerSet>
+    <AmerLanguageCode>en</AmerLanguageCode>
+
+    <EmeaProductSetCatalogID>20202</EmeaProductSetCatalogID>
+    <EmeaComponentOne>PowerEdgeT130</EmeaComponentOne>
+    <EmeaComponentTwo>PowerEdgeM630VRTX</EmeaComponentTwo>
+    <EmeaRegion>EMEA</EmeaRegion>
+    <EmeaCountryCode>UK</EmeaCountryCode>
+    <EmeaCustomerSet>g_20202</EmeaCustomerSet>
+    <EmeaLanguageCode>en</EmeaLanguageCode>
+    
+    <APJProductSetCatalogID>39101</APJProductSetCatalogID>
+    <APJComponentOne>PowerEdgeT630</APJComponentOne>
+    <APJComponentTwo>PowerEdgeM630VRTX</APJComponentTwo>
+    <APJRegion>APJ</APJRegion>
+    <APJCountryCode>AU</APJCountryCode>
+    <APJCustomerSet>g_39101</APJCustomerSet>
+    <APJLanguageCode>en</APJLanguageCode>
+
+    <SolutionSetName>YourDesktop</SolutionSetName>
+    <SolutionSetComponent>DesktopHardware</SolutionSetComponent>
+    
+   <EvaluationRuleName>SolutionSetEveRule</EvaluationRuleName>
+    <EvaluationRuleCount>1</EvaluationRuleCount>
+    <ProductRuleCount>0</ProductRuleCount>
+  
+  </AdvisorBVT>
+</TestData>

@@ -1,0 +1,15 @@
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\SB.Pages.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\SB.Pages.pdb
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\Common.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\SB.Services.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\WebDriver.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\WebDriver.Support.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\Common.pdb
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\SB.Services.pdb
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\WebDriver.xml
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\bin\GE1\WebDriver.Support.xml
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\obj\GE1\SB.Pages.csprojResolveAssemblyReference.cache
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\obj\GE1\SB.Pages.dll
+F:\Code\SBtest\source\Dell.SystemBuilder.Automation\SB.Pages\obj\GE1\SB.Pages.pdb
